@@ -30,13 +30,31 @@
             <li class="nav-list__item"><a class="nav-list__item-link" href="#">Дебетовая карта</a></li>
             <li class="nav-list__item"><a class="nav-list__item-link" href="#">Страхование</a></li>
             <li class="nav-list__item"><a class="nav-list__item-link" href="#">Друзья</a></li>
-            <li class="nav-list__item"><a class="nav-list__item-link" href="#">Интернет-банк</a></li>           
+            <li class="nav-list__item"><a class="nav-list__item-link" href="#">Интернет-банк</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-
+  <main>
+    <div class="breadcrumbs__wrapper">
+      <div class="container container__inner">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__item-link" href="/"><span>Главная</span></a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__item-link" href="#"><span>Вклады</span></a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span>
+            <span class="breadcrumbs__item-link breadcrumbs__item-link--active">Калькулятор</span>
+            </span>            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>

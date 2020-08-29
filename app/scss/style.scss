@@ -67,7 +67,9 @@ main {
   padding: 0 10px;
   margin: 0 auto;
 }
-
+.container__inner {
+  padding: 0 30px;
+}
 button {
   cursor: pointer;
 }
@@ -81,7 +83,7 @@ button {
     color: $second-color;
     display: flex;
     flex-direction: column;
-    letter-spacing: 0;   
+    letter-spacing: 0;
   }
   &__top {
     display: flex;
@@ -100,12 +102,12 @@ button {
 .nav-list {
   display: flex;
   justify-content: space-between;
-  padding: 0 25px;
-  &__item{
+  padding: 0 20px;
+  &__item {
     flex-grow: 1;
-  }
-  &__item + .nav-list__item{
-    border-left: 1px solid $second-color;
+    + .nav-list__item {
+      border-left: 1px solid $second-color;
+    }
   }
   &__item-link {
     font-size: 14px;
@@ -113,11 +115,43 @@ button {
     padding: 12px 0;
     display: flex;
     justify-content: center;
-    &--active{
+    &--active {
       background-color: $second-color;
     }
- 
   }
 }
+
+/* BREADCRUMBS */
+.breadcrumbs {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 24px;
+  &__item {
+    position: relative;
+    + .breadcrumbs__item {
+      padding-left: 12px;
+      &::before {
+        content: "-";
+        position: absolute;
+        top: 0;
+        left: 4px;
+      }
+    }
+    &-link {
+      text-decoration: underline;
+      &--active {
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+
 
 @import "_media";
