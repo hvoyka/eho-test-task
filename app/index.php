@@ -59,25 +59,32 @@
       <div class="container container__inner">
         <div class="calc__wrapper">
           <h1 class="calc__title">Калькулятор</h1>
-          <form class="calc__form">
+          <form id="calcForm" class="calc__form">
             <div class="calc__form-item">
-              <label for="calc__form-date" class="calc__form-label">
-                Дата оформления вклада:
+              <label for="calcFormDate" class="calc__form-label">
+                Дата оформления вклада
               </label>
-              <input id="calc__form-date" class="calc__form-input " type="date">
+              <input id="calcFormDate" class="calc__form-input " type="text" name="date" required>
             </div>
             <div class="calc__form-item">
               <label for="calc__form-sum" class="calc__form-label">
-                Сумма вклада:
+                Сумма вклада
               </label>
-              <input id="calc__form-sum" class="calc__form-input" type="text" min="1000" max="3000000">
+              <input id="calcFormSum" class="calc__form-input" type="text" min="1000" max="3000000" value="1000" name="summ">
+              <div class="calc__form-range-box">
+                <input id="calcFormSumRange" class="calc__form-range" type="range" min="1000" max="3000000" step="1000" value="1000">
+                <div class="calc__form-range-minmax">
+                  <span>1 тыс. руб.</span> <span>3 000 000</span>
+                </div>
+              </div>
+
             </div>
 
             <div class="calc__form-item">
               <label for="calc__form-time" class="calc__form-label">
-                Срок вклада:
+                Срок вклада
               </label>
-              <select id="calc__form-time" class="calc__form-input">
+              <select id="calc__form-time" class="calc__form-input" name="years">
                 <option value="1">1 год</option>
                 <option value="2">2 год</option>
                 <option value="3">3 год</option>
@@ -88,22 +95,28 @@
 
             <div class="calc__form-item">
               <label class="calc__form-label">
-                Пополнение вклада:
+                Пополнение вклада
               </label>
 
               <label>
-                <input type="radio" id="caclRadioDep1" name="calcDep" value="dep" checked>
+                <input type="radio" id="caclRadioDep1" class="calc__form-radio" name="calcDep" value="false" checked>
                 Нет</label>
 
               <label>
-                <input type="radio" id="caclRadioDep2" name="calcDep" value="dep">
+                <input type="radio" id="caclRadioDep2"  class="calc__form-radio" name="calcDep" value="true">
                 да</label>
             </div>
             <div class="calc__form-item">
-              <label for="calc__form-sum-dep" class="calc__form-label">
-                Сумма пополнения вклада:
+              <label for="calcFormDepSum" class="calc__form-label">
+                Сумма пополнения вклада
               </label>
-              <input id="calc__form-sum-dep" class="calc__form-input" type="text" min="1000" max="3000000">
+              <input id="calcFormDepSum" class="calc__form-input" type="text" min="1000" max="3000000" name="summadd" disabled>
+              <div class="calc__form-range-box">
+                <input id="calcFormDepSumRange" class="calc__form-range" type="range" min="1000" max="3000000" step="1000" value="1000">
+                <div class="calc__form-range-minmax">
+                  <span>1 тыс. руб.</span> <span>3 000 000</span>
+                </div>
+              </div>
             </div>
             <div class="calc__form-item">
               <button class="calc__form-btn">Рассчитать</button>
