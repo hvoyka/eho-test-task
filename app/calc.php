@@ -13,8 +13,10 @@ $percent= 0.1;
 if($_POST['calcDep'] !='true'){
     $summ += ($summ * $percent * $years * $daysInYear) / $daysInYear;
 } else {
-    for ($i = 1; $i < $years * 12; $i++) {
-        $summ = $summ  + $summadd + $summ * $daysInMonth  * ($percent / $daysInYear);
+    for ($i = 1; $i <= $years * 12; $i++) {
+        /* $summ = $summ  + $summadd + $summ * $daysInMonth  * ($percent / $daysInYear); */
+        $summ = $summ  + ($summadd + $summ )* $daysInMonth  * ($percent / $daysInYear);
+        echo $summ . " /";
     }
 }
-echo round($summ);
+/* echo round($summ); */

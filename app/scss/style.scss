@@ -51,6 +51,16 @@ textarea,
 button {
   font-family: inherit;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 body {
   color: $text-color;
   font-family: "Arial", sans-serif;

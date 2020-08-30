@@ -67,10 +67,10 @@
               <input id="calcFormDate" class="calc__form-input " type="text" name="date" required>
             </div>
             <div class="calc__form-item">
-              <label for="calc__form-sum" class="calc__form-label">
+              <label class="calc__form-label">
                 Сумма вклада
               </label>
-              <input id="calcFormSum" class="calc__form-input" type="text" min="1000" max="3000000" value="1000" name="summ">
+              <input id="calcFormSum" class="calc__form-input" type="number" min="1000" max="3000000" value="1000" name="summ">
               <div class="calc__form-range-box">
                 <input id="calcFormSumRange" class="calc__form-range" type="range" min="1000" max="3000000" step="1000" value="1000">
                 <div class="calc__form-range-minmax">
@@ -110,7 +110,7 @@
               <label for="calcFormDepSum" class="calc__form-label">
                 Сумма пополнения вклада
               </label>
-              <input id="calcFormDepSum" class="calc__form-input" type="text" min="1000" max="3000000" name="summadd" disabled>
+              <input id="calcFormDepSum" class="calc__form-input" type="number" min="1000" max="3000000" name="summadd" disabled>
               <div class="calc__form-range-box">
                 <input id="calcFormDepSumRange" class="calc__form-range" type="range" min="1000" max="3000000" step="1000" value="1000">
                 <div class="calc__form-range-minmax">
